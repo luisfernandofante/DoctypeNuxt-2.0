@@ -5,7 +5,7 @@
     <section class="contato-section" title="Contato">
       <div class="meio-width">
         <h2 class="section-titulo">{Contato}</h2>
-        <p>Nosso suporte "Patrício, o Ornitorrinco" ficará muito feliz em te ajudar!</p>
+        <p>Nosso suporte "Patrício, o Ornitorrinco" adora receber menssagens!</p>
              <img  class="patricio" src="../assets/platypus.svg" alt="ícone de um ornitorrinco">
         <input type="text" class="name" placeholder="Nome" title="nome">
         <input type="email" class="email" placeholder="Email" title="email">
@@ -13,6 +13,7 @@
         <button title="enviar">Enviar</button>
   
       </div>
+      
     </section>
     
    <app-footer/>

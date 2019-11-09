@@ -5,7 +5,7 @@
     <v-parallax
       title="Anúncio do Hackathon"
       dark
-      :src="require('assets/planetas-hackathon.jpg')"
+      :src="require('assets/espaco-hackathon.jpg')"
       alt="imagem contendo ilustração de planetas e estrelas"
     >
       <h1 class="text-center titulo-parallax">#HACKATHON &lt;!DOCTYPE&gt;</h1>
@@ -13,7 +13,7 @@
     </v-parallax>
 
     <!-- seção que vai o formulário -->
-    <section class="contato-section" title="Informação Hackathon">
+    <section class="contato-section" title="Aviso sobre Hackathon">
       <h2 class="section-titulo">{Hackathon}</h2>
       <p class="texto">
         Plunct, Plact, Zum! Não haverá #Hackaton algum... se você não se
@@ -23,7 +23,7 @@
           <time datetime="”03-12-2019”">03/12</time>
         </strong>.
       </p>
-      <img class="patricio" src="../assets/alien.svg" alt="ícone de um alienígena" />
+      <img class="patricio" src="../assets/planet.svg" alt="ícone de planetas" />
       <!-- aqui vai um formulário -->
 
   <v-row justify="space-around">
@@ -35,14 +35,15 @@
     <v-text-field
       v-model="name"
       :rules="nameRules"
-      label="Nome"
+      label="Nome completo*"
       required
+      title="Nome completo. Obrigatório"
     ></v-text-field>
 
     <v-text-field
       v-model="sobrenome"
       :rules="sobrenomeRules"
-      label="Sobre Nome"
+      label="Sobrenome"
       required
     ></v-text-field>
 
@@ -50,39 +51,44 @@
       v-model="idade"
       :counter="3"
       :rules="idadeRules"
-      label="Idade"
+      label="Idade*"
       id="idade"
       required
+       title="Idade. Obrigatória"
     ></v-text-field>
     
     <v-text-field
       v-model="email"
       :rules="emailRules"
-      label="E-mail"
+      label="E-mail*"
       required
+       title="Endereço de E-mail. Obrigatório"
     ></v-text-field>
 
     <v-select
       v-model="select"
       :items="estado"
-      :rules="[v => !!v || 'Estado é Necessário']"
-      label="Estado"
+      :rules="[v => !!v || ' O campo Estado é obrigatório']"
+      label="Cidade*"
       required
+      title="Cidade. Obrigatório"
     ></v-select>
 
     
     <v-text-field
       v-model="faculdade"
-      :rules="[v => !!v || 'Faculdade é Necessário']"
-      label="Faculdade"
+      :rules="[v => !!v || 'O campo Faculdade é obrigatório']"
+      label="Faculdade*"
       required
+       title="Faculdade. Obrigatório"
     ></v-text-field>
 
     <v-text-field
       v-model="Curso"
-      :rules="[v => !!v || 'Curso é Necessário']"
-      label="Curso"
+      :rules="[v => !!v || 'O campo Curso é obrigatório']"
+      label="Curso*"
       required
+       title="Curso. Obrigatório"
     ></v-text-field>
 
    
@@ -99,12 +105,10 @@
     
   </v-form>
   </v-row>
-      
-
-
+    
     </section>
 
-    <section class="sobre-section" title="Sobre nós">
+    <section class="sobre-section">
       <div class="interior-width">
         <div class="sobre-section-linha">
           <div class="sobre-section-coluna">
@@ -167,13 +171,38 @@
       </div>
     </section>
         <!-- seção que vai o formulário -->
-    <section class="contato-section" title="Informação Hackathon">
+    <!-- <section class="contato-section" title="Informação Hackathon">
       <h2 class="section-titulo">{vencedores 2018}</h2>
       <p class="texto">
         Conheça a equipe campeã da 11º edição!
       </p>
       <img class="patricio" src="../assets/alien.svg" alt="ícone de um alienígena" />
-      <!-- aqui vai um formulário -->
+   
+    </section> -->
+    <section class="contato-section" title="Grupo vencedor do Hackathon 2018">
+      <div class="interior-width">
+        <!-- título -->
+        <h2 class="section-titulo">{Vencedores 2018}</h2>
+        <p class="texto">
+          Equipe campeãe da 11º edição - Megazord!
+        </p>
+          <img class="patricio" src="../assets/alien.svg" alt="ícone de um alienígena" />
+        <div class="sobre-section-linha">
+          <div class="sobre-section-coluna">
+            <section class="sobre" title="Equipe vencedora em reunião com superior">
+             <img class="time" src="../assets/equipe.jpg" alt="Equipe 'Megazord' vencedora do hackathon 2018 reunida em uma sala com a diretora de recursos Humanos, Kássia Boch. A imagem contém ao todo 6 pessoas. " />
+   
+            </section>
+          </div>
+          <section class="sobre-section-coluna" title="vídeo da empresa">
+              <section class="sobre" title="Sobre a equipe">
+              <p>
+                A equipe carinhosamente apelidada de 'Megazord' se destacou no último Hackathon pelo seu ótimo desenpenho na organização de tarefas em equipe, e claro, o projeto entregue.
+              </p>
+            </section>
+          </section>
+        </div>
+      </div>
     </section>
 
   <app-footer/>
@@ -246,7 +275,12 @@ h2::after {
   animation: pisca 0.7s infinite;
 }
 
-
+.time{
+  height: 100%;
+  margin-top:15px;
+  width: 600px;
+  background-size: cover;
+}
 
 @keyframes pisca {
   0%,

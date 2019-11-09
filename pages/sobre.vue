@@ -1,6 +1,5 @@
 <template>
 <div>
-  <body>
     <!-- cabeçalho -->
     <app-header />
     <section class="sobre-section" title="Sobre nós">
@@ -24,14 +23,13 @@
             <div class="video" title="vídeo explicativo da empresa">
               <div class="embed">
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Bd_V0XgLccE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                <img src="/astronauta.jpg">
               </div>
             </div>
           </section>
         </div>
       </div>
     </section>
-  </body>
+ 
   <!-- rodapé -->
   <app-footer />
 </div>

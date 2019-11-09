@@ -11,7 +11,7 @@
       <h3 class="text-center sub-parallax ">Um evento de outro mundo!</h3>
         
      <div class="text-center">
-          <v-btn class="ma-5" outlined color="white" href="/paginas/hackathon">saiba mais</v-btn>
+          <v-btn class="ma-5" outlined color="white" href="/hackathon">saiba mais</v-btn>
       </div>
         </v-parallax>
         <!-- final da parallax -->
@@ -131,6 +131,11 @@
          dark
         :src="require('assets/planetas-hackathon.jpg')" alt="imagem contendo ilustração de planetas e estrelas"
        >
+       <h2 class=" text-center titulo-parallax">Não deixe o portal fechar!</h2>
+      <h3 class="text-center sub-parallax ">Faça seu passaporte!</h3>
+      <div class="text-center">
+          <v-btn class="ma-5" outlined color="white" href="/hackathon">saiba mais</v-btn>
+      </div>
    
               </v-parallax>
            <!-- final da parallax  -->

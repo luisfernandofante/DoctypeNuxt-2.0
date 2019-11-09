@@ -12,18 +12,18 @@
         </a>
 
         <input type="checkbox" id="chk" />
-        <label for="chk" class="show-menu-btn">
+        <label for="chk" class="mostra-menu-btn">
           <i class="fas fa-bars"></i>
         </label>
 
         <ul class="menu">
-          <a style="color:white;" href="/" title="Início">Início</a>
-          <a style="color:white;" href="/projetos" title="Projetos">Projetos</a>
-          <a style="color:white;" href="/hackaton" title="Hackathon">Hackathon</a>
-          <a style="color:white;" href="/sobre" title="Sobre">Sobre</a>
-          <a style="color:white;" href="/contato" title="Contato">Contato</a>
-          <a style="color:white;" href="/admin/login" title="Login">Login</a>
-          <label for="chk" class="hide-menu-btn">
+          <a href="/" title="Início">Início</a>
+          <a href="/projetos" title="Projetos">Projetos</a>
+          <a href="/hackathon" title="Hackathon">Hackathon</a>
+          <a href="/sobre" title="Sobre">Sobre</a>
+          <a href="/contato" title="Contato">Contato</a>
+          <a href="/admin/login" title="Login">Login</a>
+          <label for="chk" class="esconde-menu-btn">
             <i class="fas fa-times"></i>
           </label>
         </ul>
@@ -32,12 +32,13 @@
   </div>
 </template>
 
-<style>
+<style scoped>
+
 header {
   height: 100px;
   background: black;
   padding: 0 20px;
-  color: #fff;
+
   display: flex;
 }
 
@@ -58,23 +59,29 @@ nav {
   line-height: 100px;
 }
 .menu a {
+  color:white;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0 10px;
   transition: 0.4s;
+
+}
+.menu a:hover{
+  border-bottom: 1px solid white;
+  padding: 5px;
 }
 
-.show-menu-btn,
-.hide-menu-btn {
+.mostra-menu-btn,
+.esconde-menu-btn {
   transition: 0.4s;
   font-size: 30px;
   cursor: pointer;
   display: none;
 }
-.show-menu-btn {
+/* .mostra-menu-btn {
   float: right;
-}
-.show-menu-btn i {
+} */
+.esconde-menu-btn i {
   line-height: 100px;
 }
 
@@ -105,7 +112,9 @@ nav {
   .menu a {
     display: block;
     padding: 20px;
+   
   }
+ 
   .hide-menu-btn {
     position: absolute;
     top: 40px;

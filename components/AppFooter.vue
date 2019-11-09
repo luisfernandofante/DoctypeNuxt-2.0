@@ -151,7 +151,7 @@ footer {
 
 @media screen and (min-width: 568px) {
   .footer-social-overlap > a {
-    font-size: 2.5rem;
+    font-size: 1rem;
   }
 
   .footer-social-overlap {
@@ -166,7 +166,7 @@ footer {
     text-align: center;
     width: 100%;
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 </style>
