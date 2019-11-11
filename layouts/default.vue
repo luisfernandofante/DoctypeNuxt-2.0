@@ -167,9 +167,6 @@ body {
   border: none;
 }
 // hackathon
-.v-form{
-  width: 40%;
-}
 .conter{
   padding:10px;
   position:relative;
@@ -219,10 +216,12 @@ body {
   padding: 80px 0;
   @extend %align-centro;
 }
+#formulario{
+  width: 40%;
+}
 .meio-width{
   max-width: 700px;
-  margin: auto;
-  padding: 0 20px;
+  margin: 0 auto;
 }
 .name,.email,.message{
   background: none;
@@ -248,7 +247,7 @@ body {
   min-width: 100%;
   max-width: 100%;
 }
-.contato-section button{
+#button{
   background: none;
   color: $Preto;
   border: 1px solid $Preto;
