@@ -1,5 +1,5 @@
 <template>
-<div>
+  <div>
     <!-- cabeçalho -->
     <app-header />
     <section class="sobre-section" title="Sobre nós">
@@ -22,17 +22,24 @@
           <section class="sobre-section-coluna" title="vídeo da empresa">
             <div class="video" title="vídeo explicativo da empresa">
               <div class="embed">
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Bd_V0XgLccE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/sVZpHFXcFJw"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </section>
         </div>
       </div>
     </section>
- 
-  <!-- rodapé -->
-  <app-footer />
-</div>
+
+    <!-- rodapé -->
+    <app-footer />
+  </div>
 </template>
 <script>
 import AppHeader from "../components/AppHeader";

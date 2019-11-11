@@ -100,14 +100,14 @@ body {
   color: $Preto;
 }
 
-.icon i {
+.icon .v-icon {
   line-height: 70px;
   transform: rotate(-45deg);
   font-size: $Icone;
 }
 .box:hover .icon, .contato-section button:hover  {
   background: $Preto;
-  color: $Gelo;
+ 
 }
 
 .servico-titulo {
@@ -265,11 +265,14 @@ body {
 
 }
 // medias
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 360px) {
   .sobre-section-coluna {
     flex: 50%;
   }
-
+  
+.servico-titulo{
+  font-size: $Descrição;
+}
   .video {
     padding-left: 30px;
   }

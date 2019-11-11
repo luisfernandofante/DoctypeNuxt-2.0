@@ -30,7 +30,8 @@
           <div class="box" title="Apps" >
             <!-- íone -->
             <div class="icon">
-              <i class="fas fa-mobile-alt" alt="Criação de aplicativos" ></i>
+              
+                <v-icon x-large >mdi-cellphone</v-icon>
             </div>
             <!-- final do ícone -->
             <!-- título do serviço -->
@@ -46,7 +47,8 @@
           <div class="box" title="Acessibilidade">
             <!-- ícone -->
             <div class="icon">
-              <i class="fas fa-users" alt="Serviços de Acessibilidade" ></i>
+              <v-icon x-large>mdi-human</v-icon>
+
             </div>
             <!-- final de ícone -->
             <!-- título -->
@@ -62,7 +64,8 @@
           <div class="box" title="Inteligência Artificial">
             <!-- ícone -->
             <div class="icon">
-              <i class="fas fa-brain" alt ="Desenvolvimento de tecnolgias com inteligência artificial"></i>
+              
+                <v-icon x-large >mdi-brain</v-icon>
             </div>
             <!-- ícone -->
             <!-- título -->
@@ -78,7 +81,8 @@
           <div class="box" title="Otimização de sites">
             <!-- ícone -->
             <div class="icon">
-              <i class="fas fa-file-alt" alt="Serviços de otimização de sites (SEO)" ></i>
+              
+                <v-icon x-large >mdi-clipboard-pulse-outline</v-icon>
             </div>
             <!-- final ícone -->
             <!-- título -->
@@ -94,7 +98,8 @@
           <div class="box" title="Criação de sites" >
             <!-- ícone -->
             <div class="icon">
-              <i class="fas fa-code" alt="Criação de Sites" ></i>
+              
+                <v-icon x-large>mdi-code-tags</v-icon>
             </div>
             <!-- final ícone -->
             <!-- título -->
@@ -110,7 +115,8 @@
           <div class="box" title="Webdesign" >
             <!-- ícone -->
             <div class="icon">
-              <i class="fas fa-pen-fancy" alt="Serviços de Webdesign" ></i>
+              
+                <v-icon x-large>mdi-fountain-pen-tip</v-icon>
             </div>
             <!-- final ícone -->
             <!-- título -->

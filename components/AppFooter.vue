@@ -3,11 +3,6 @@
     <footer class="flex-rw">
       <!-- seção de icones -->
       <section class="footer-social-section flex-rw">
-        <!-- texto -->
-        <!-- <span class="footer-social-overlap footer-social-connect">
-                SIGA A &lt;!DOCTYPE&gt;
-        </span>-->
-        <!-- final do texto -->
         <!-- icones -->
         <span class="footer-social-overlap footer-social-icons-wrapper">
           <a
@@ -16,7 +11,7 @@
             target="_blank"
             title="Behance"
           >
-            <i class="fab fa-behance-square"></i>
+            <v-icon>mdi-behance</v-icon>
           </a>
           <a
             href="https://www.facebook.com"
@@ -24,10 +19,15 @@
             target="_blank"
             title="Facebook"
           >
-            <i class="fab fa-facebook-square"></i>
+            <v-icon>mdi-facebook</v-icon>
           </a>
-          <a href="http://github.com" class="generic-anchor github" target="_blank" title="Github">
-            <i class="fab fa-github-square"></i>
+          <a
+            href="https://www.gmail.com"
+            class="generic-anchor gmail"
+            target="_blank"
+            title="Gmail"
+          >
+            <v-icon>mdi-gmail</v-icon>
           </a>
           <a
             href="https://www.twitter.com"
@@ -35,7 +35,7 @@
             target="_blank"
             title="Twitter"
           >
-            <i class="fab fa-twitter-square"></i>
+            <v-icon>mdi-twitter</v-icon>
           </a>
         </span>
         <!-- final dos ícones -->
@@ -45,9 +45,12 @@
       <!-- últimas informações -->
       <section class="footer-bottom-section flex-rw">
         <div class="footer-bottom-wrapper">
-          <i class="fa fa-copyright" role="copyright" alt="ícone de direitos autorais"></i> 2019 All Rights Reserved.
+          <v-icon>mdi-copyright</v-icon>
+2019 All Rights Reserved &lt;!DOCTYPE&gt;.
+        </div>
+        <div class="footer-bottom-wrapper">
           <address class="footer-address" role="company address">
-            &lt;!DOCTYPE&gt; Av. Antonio Neudenir Benagna Micali,107.Taquaritinga-SP
+            Av. Antonio Neudenir Benagna Micali,107. Taquaritinga-SP
             Tel:(16)99166-2578
           </address>
         </div>
@@ -58,37 +61,25 @@
   </div>
 </template>
 <style  scoped>
-html,
+/* html,
 body {
   height: 100%;
-}
+} */
 
-body {
+/* body {
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
   font-family: "Space Mono", monospace;
   justify-content: space-between;
-}
+} */
 
 a {
   text-decoration: none;
 }
 
-.generic-anchor {
+.v-icon {
   color: white;
-}
-.facebook:hover {
-  color: #487eb0;
-}
-.twitter:hover {
-  color: #22a6b3;
-}
-.github:hover {
-  color: #6c5ce7;
-}
-.behance:hover {
-  color: #0097e6;
 }
 
 .flex-rw {
@@ -136,8 +127,8 @@ footer {
 .footer-bottom-wrapper {
   font-size: 1rem;
   color: #fff;
-  align-items: center;
-  text-align: justify;
+  /* align-items: center; */
+  text-align: center;
 }
 
 .footer-social-overlap > a:not(:first-child) {

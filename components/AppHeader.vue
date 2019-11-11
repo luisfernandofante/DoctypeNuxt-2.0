@@ -13,7 +13,7 @@
 
         <input type="checkbox" id="chk" />
         <label for="chk" class="mostra-menu-btn">
-          <i class="fas fa-bars"></i>
+       <v-icon>mdi-menu</v-icon>
         </label>
 
         <ul class="menu">
@@ -22,7 +22,7 @@
           <a href="/hackathon" title="Hackathon">Hackathon</a>
           <a href="/sobre" title="Sobre">Sobre</a>
           <a href="/contato" title="Contato">Contato</a>
-          <a href="/admin/login" title="Login">Login</a>
+          <a href="/login" title="Login">Login</a>
           <label for="chk" class="esconde-menu-btn">
             <i class="fas fa-times"></i>
           </label>
@@ -81,7 +81,7 @@ nav {
 /* .mostra-menu-btn {
   float: right;
 } */
-.esconde-menu-btn i {
+.esconde-menu-btn .v-icon {
   line-height: 100px;
 }
 

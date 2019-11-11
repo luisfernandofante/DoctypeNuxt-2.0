@@ -9,7 +9,7 @@
       alt="imagem contendo ilustração de planetas e estrelas"
     >
       <h1 class="text-center titulo-parallax">#HACKATHON &lt;!DOCTYPE&gt;</h1>
-      <h3 class="text-center sub-parallax">A 12º edição está de outro mundo!</h3>
+      <h4 class="text-center sub-parallax">A 12º edição está de outro mundo!</h4>
     </v-parallax>
 
     <!-- seção que vai o formulário -->
@@ -118,24 +118,24 @@
                
               <ul>
                 <li class="servico-desc">
-                  <h3 class="servico-titulo">A participação é paga?</h3>Não. A participação do evento é gratuita. No entanto, os custos de
+                  <h3 class="servico-titulo-hack">A participação é paga?</h3>Não. A participação do evento é gratuita. No entanto, os custos de
                   viagem, estadia e outros fora do evento são de responsabilidade do
                   participante.
                 </li>
 
                 <li class="servico-desc">
-                  <h3 class="servico-titulo">O evento é presencial ou online?</h3>O Hackathon é presencial. O nosso Q.G é na Av. Antônio Neudenir Benagna Micali,107 Taquaritinga-SP.
+                  <h3 class="servico-titulo-hack">O evento é presencial ou online?</h3>O Hackathon é presencial. O nosso Q.G é na Av. Antônio Neudenir Benagna Micali,107 Taquaritinga-SP.
                 </li>
 
                 <li class="servico-desc">
-                  <h3 class="servico-titulo">Existe um limite de idade para participar?</h3>Sim. Uma vez que a nossa intenção é contratar novos profissionais talentosos, limitamos a participação apenas para pessoas com idade superior a 16 anos.
+                  <h3 class="servico-titulo-hack">Existe um limite de idade para participar?</h3>Sim. Uma vez que a nossa intenção é contratar novos profissionais talentosos, limitamos a participação apenas para pessoas com idade superior a 16 anos.
                 </li>
 
                 <li class="servico-desc">
-                  <h3 class="servico-titulo">Posso escolher minha equipe?</h3>Não. As equipes serão organizadas no dia na hora do evento. Valorizamos o trabalho em equipe independentemente de quem sejam os envolvidos.
+                  <h3 class="servico-titulo-hack">Posso escolher minha equipe?</h3>Não. As equipes serão organizadas no dia na hora do evento. Valorizamos o trabalho em equipe independentemente de quem sejam os envolvidos.
                 </li>
                 <li class="servico-desc">
-                  <h3 class="servico-titulo">As esquipes serão compostas por quantos integrantes?</h3>As equipes terão entre 2 à 5 integrantes no máximo.
+                  <h3 class="servico-titulo-hack">As esquipes serão compostas por quantos integrantes?</h3>As equipes terão entre 2 à 5 integrantes no máximo.
                 </li>
               </ul>
             </section>
@@ -263,6 +263,9 @@ import AppFooter from "../components/AppFooter.vue";
 p {
   padding-top: 10px;
   /* font-weight: bold; */
+}
+h3{
+  color:#1e272e;
 }
 li {
   list-style: none;

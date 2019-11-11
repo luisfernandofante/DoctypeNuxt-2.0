@@ -13,6 +13,15 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
+    meta:[
+      {name:'authors', content:'Aline Iasmim, Daphne Helena, Luís Fante, José Airton, Priscila Agda'}
+    ],
+    meta:[
+      {name:'description', content:'Seja bem-vindo a <!Doctype! Nós te ajudamos a alcançar objetivos futuros com o uso da tecnologia. Telefone(16)99165-2578.'}
+    ],
+    meta:[
+      {name:'keywords', content:'Doctype, Hackathon Doctype, Aline Damião, Daphne Helena, Priscila Agda, José Airton, Luís Fante, Desenvolvimento de Apps ,Acessibilidade, Criação de Sites, Webdesign, SEO, Inteligência Artificial, Héstia Home Assistent, Hackathon 2019, Palestras Fatec.'}
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
