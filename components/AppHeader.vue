@@ -22,7 +22,7 @@
           <a href="/hackathon" title="Hackathon">Hackathon</a>
           <a href="/sobre" title="Sobre">Sobre</a>
           <a href="/contato" title="Contato">Contato</a>
-          <a href="/login" title="Login">Login</a>
+          <a href="admin/login" title="Login">Login</a>
           <label for="chk" class="esconde-menu-btn">
             <i class="fas fa-times"></i>
           </label>
