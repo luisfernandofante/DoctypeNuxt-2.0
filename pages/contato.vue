@@ -17,7 +17,7 @@
 
           <v-text-field v-model="name" :rules="mensagemRules" label="Mensagem" required></v-text-field>
 
-          <button @click="validate" id="button">
+          <button :disabled="!valid" @click="validate" id="button">
             Enviar
           </button>
         </v-form>
@@ -52,6 +52,7 @@ export default {
     ]
   }),
 
+  
   methods: {
     validate() {
       if (this.$refs.form.validate()) {

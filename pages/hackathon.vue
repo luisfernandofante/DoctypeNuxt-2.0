@@ -63,7 +63,7 @@
             required
           ></v-select>
 
-          <button @click="validate" id="button">
+          <button :disabled="!valid" @click="validate" id="button">
             Enviar
           </button>
           
