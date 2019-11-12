@@ -11,17 +11,28 @@
             <v-icon>mdi-format-list-bulleted</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Lista de Inscritos</v-list-item-title>
+            <v-list-item-title>Listagem de usuários</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+
         <v-list-item @click="entra2">
           <v-list-item-action>
             <v-icon>mdi-playlist-edit</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Editar Lista</v-list-item-title>
+            <v-list-item-title>Editar usuário</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+
+         <v-list-item @click="entra3">
+          <v-list-item-action>
+            <v-icon>mdi-playlist-edit</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Incluir usuário</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
       </v-list>
     </v-navigation-drawer>
 
@@ -53,6 +64,9 @@
       },
       entra2(){
         this.$router.push('usuarios/_id')
+      },
+      entra3(){
+        this.$router.push('usuarios/incluir')
       }
     }
     
