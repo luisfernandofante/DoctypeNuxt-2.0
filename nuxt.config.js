@@ -6,7 +6,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
+    titleTemplate: '%s | Doctype' + process.env.npm_package_name,
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -20,11 +20,44 @@ module.exports = {
       { name: 'description', content: 'Seja bem-vindo a <!Doctype! Nós te ajudamos a alcançar objetivos futuros com o uso da tecnologia. Telefone(16)99165-2578.' }
     ],
     meta: [
-      { name: 'keywords', content: 'Doctype, Hackathon Doctype, Aline Damião, Daphne Helena, Priscila Agda, José Airton, Luís Fante, Desenvolvimento de Apps ,Acessibilidade, Criação de Sites, Webdesign, SEO, Inteligência Artificial, Héstia Home Assistent, Hackathon 2019, Palestras Fatec.' }
+      { name: 'keywords', content: 'Doctype, Hackathon Doctype, Aline Iasmim, Daphne Helena, Priscila Agda, José Airton, Luís Fante, Desenvolvimento de Apps ,Acessibilidade, Criação de Sites, Webdesign, SEO, Inteligência Artificial, Hackathon em Taquaritinga, Hackathon 2019, Empresas de Desenvolvimento em Taquaritinga.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+  metaInfo: {
+    meta: [
+     
+      // OpenGraph data (Most widely used)
+      {property: 'og:title', content: 'Início | Doctype'},
+      {property: 'og:site_name', content: 'Doctype'},
+      // The list of types is available here: http://ogp.me/#types
+      {property: 'og:type', content: 'website'},
+      // Should the the same as your canonical link, see below.
+      {property: 'og:url', content: 'http://localhost:3000/'},
+      {property: 'og:image', content: 'http://localhost:3000/planetas-hackathon.jpg'},
+      // Often the same as your meta description, but not always.
+      {property: 'og:description', content: 'Seja bem-vindo a <!Doctype! Nós te ajudamos a alcançar objetivos futuros com o uso da tecnologia. Telefone(16)99165-2578.'},
+  
+      // Twitter card
+      {name: 'twitter:card', content: 'summary'},
+      {name: 'twitter:site', content: 'http://localhost:3000/'},
+      {name: 'twitter:title', content: 'Início | Doctype'},
+      {name: 'twitter:description', content: 'Seja bem-vindo a <!Doctype! Nós te ajudamos a alcançar objetivos futuros com o uso da tecnologia. Telefone(16)99165-2578.'},
+      // Your twitter handle, if you have one.
+      {name: 'twitter:creator', content: '@PatricioDoctype'},
+      {name: 'twitter:image:src', content: 'http://localhost:3000/planetas-hackathon.jpg'},
+  
+      // Google / Schema.org markup:
+      {itemprop: 'name', content: 'Início | Doctype'},
+      {itemprop: 'description', content: 'Seja bem-vindo a <!Doctype! Nós te ajudamos a alcançar objetivos futuros com o uso da tecnologia. Telefone(16)99165-2578.'},
+      {itemprop: 'image', content: 'http://localhost:3000/planetas-hackathon.jpg'}
+    ],
+    link: [
+      {rel: 'canonical', href: 'http://localhost:3000//Doctype'}
+    ],
+    
   },
   /*
   ** Customize the progress-bar color
