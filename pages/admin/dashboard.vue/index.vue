@@ -1,11 +1,12 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire" >
     <v-navigation-drawer
       v-model="drawer"
       app
       clipped
     >
-      <v-list dense>
+    
+      <v-list dense >
         <v-list-item @click="entrar">
           <v-list-item-action>
             <v-icon>mdi-format-list-bulleted</v-icon>
@@ -39,9 +40,16 @@
     <v-app-bar
       app
       clipped-left
+      class="deep-purple accent-4"
+      justify="space-between"
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Administração</v-toolbar-title>
+          <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+          <v-toolbar-title>Administração</v-toolbar-title>
+
+          <v-spacer></v-spacer>
+
+          <v-btn  @click="sair">Sair</v-btn>
+        
     </v-app-bar>
 
   </v-app>
@@ -56,7 +64,7 @@
       drawer: null,
     }),
     created () {
-      this.$vuetify.theme.dark = true
+      this.$vuetify.theme.dark = false
     },
     methods:{
       entrar(){
@@ -67,6 +75,9 @@
       },
       entra3(){
         this.$router.push('usuarios/incluir')
+      },
+      sair(){
+        this.$router.push('/admin/login')
       }
     }
     

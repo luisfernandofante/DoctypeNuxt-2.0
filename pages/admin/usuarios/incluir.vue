@@ -7,6 +7,7 @@
     <input v-model="senha" placeholder="Senha" type="password">
 
     <button @click="salvar">Salvar</button>
+    <v-btn @click="voltar">Voltar</v-btn>
   </div>
 </template>
 
@@ -39,6 +40,9 @@ export default {
       this.$ls.set('usuarios', usuarios)
 
       this.$router.push('/admin/usuarios')
+    },
+    voltar(){
+        this.$router.push('/admin/dashboard')
     }
   }
 }

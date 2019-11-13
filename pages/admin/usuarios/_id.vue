@@ -6,6 +6,8 @@
     <input v-model="apelido" placeholder="Apelido">
 
     <button @click="salvar">Salvar</button>
+
+    <v-btn @click="voltar">Voltar</v-btn>
   </div>
 </template>
 
@@ -34,6 +36,9 @@ export default {
   methods: {
     salvar () {
 
+    },
+    voltar(){
+        this.$router.push('/admin/dashboard')
     }
   }
 }

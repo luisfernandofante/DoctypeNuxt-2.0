@@ -17,19 +17,13 @@
             <v-card class="elevation-12">
               <v-toolbar
                 color="primary"
-                dark
                 flat
               >
-                <v-toolbar-title>Login form</v-toolbar-title>
-                <v-spacer />
-                <v-tooltip bottom>
+                <v-toolbar-title >Login</v-toolbar-title> 
+                <v-spacer></v-spacer>
 
-                  <span>Source</span>
-                </v-tooltip>
-                <v-tooltip right>
-                  
-                  <span>Codepen</span>
-                </v-tooltip>
+                <v-btn @click="voltar">Voltar</v-btn>
+                
               </v-toolbar>
               <v-card-text>
                 <v-form>
@@ -51,7 +45,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer />
-                <v-btn color="primary" @click="acessar"><nuxt-link to="/admin/index"></nuxt-link>Login</v-btn>
+                <v-btn color="primary" @click="acessar">Entrar</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
@@ -69,7 +63,11 @@
 methods: {
     acessar () {
         this.$router.push('dashboard')
-      }
+      },
+    voltar(){
+      this.$router.push('/')
     }
   }
+  }
 </script>
+

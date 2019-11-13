@@ -12,6 +12,7 @@
         <v-toolbar flat color="white">
           <v-toolbar-title>Usuários</v-toolbar-title>
           <v-spacer />
+          <v-btn @click="voltar">Voltar</v-btn>
           <v-btn color="primary" dark class="mb-2" v-on="on" to="/admin/usuarios/incluir">Incluir</v-btn>
         </v-toolbar>
       </template>
@@ -60,8 +61,8 @@ export default {
     editar (item) {
       this.$router.push(`/admin/usuarios/${item.id}`)
     },
-    excluir(item){
-        this.$router.delete(item)
+    voltar(){
+        this.$router.push('/admin/dashboard')
     }
   }
 }
