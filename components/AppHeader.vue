@@ -18,7 +18,7 @@
 
         <ul class="menu">
           <a href="/" title="Início">Início</a>
-          <a href="/projetos" title="Projetos">Projetos</a>
+          <a href="/pacotes" title="Pacotes">Pacotes</a>
           <a href="/hackathon" title="Hackathon">Hackathon</a>
           <a href="/sobre" title="Sobre">Sobre</a>
           <a href="/contato" title="Contato">Contato</a>
