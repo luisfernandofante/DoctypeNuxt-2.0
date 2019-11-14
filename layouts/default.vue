@@ -263,12 +263,22 @@ body {
   height: 30%;
 
 }
+.etornico{
+  // width: 80px;
+  // height: 60px;
+   width: 30%;
+  height: 15%;
+}
 // medias
 @media screen and (min-width: 360px) {
   .sobre-section-coluna {
     flex: 50%;
   }
-  
+  .etornico{
+  width: 80px;
+  height: 100px;
+ 
+}
 .servico-titulo{
   font-size: $Descrição;
 }
@@ -277,10 +287,10 @@ body {
   }
  
 }
-.patricio{
-  width: 15%;
-  height: 20%;
-}
+// .patricio{
+//   width: 15%;
+//   height: 20%;
+// }
 
 @media screen and (min-width: 960px) {
   .box {

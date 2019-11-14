@@ -13,7 +13,7 @@
 
         <input type="checkbox" id="chk" />
         <label for="chk" class="mostra-menu-btn">
-       <v-icon>mdi-menu</v-icon>
+       <v-icon large>mdi-menu</v-icon>
         </label>
 
         <ul class="menu">
@@ -24,7 +24,7 @@
           <a href="/contato" title="Contato">Contato</a>
           <a href="admin/login" title="Login">Login</a>
           <label for="chk" class="esconde-menu-btn">
-            <i class="fas fa-times"></i>
+            <v-icon large>mdi-close</v-icon>
           </label>
         </ul>
       </nav>
@@ -67,8 +67,7 @@ nav {
 
 }
 .menu a:hover{
-  border-bottom: 1px solid white;
-  padding: 5px;
+ text-decoration: line-through;
 }
 
 .mostra-menu-btn,
@@ -92,8 +91,8 @@ nav {
 }
 
 @media screen and (max-width: 800px) {
-  .show-menu-btn,
-  .hide-menu-btn {
+  .mostra-menu-btn,
+  .esconde-menu-btn {
     display: flex;
   }
   .menu {
@@ -105,20 +104,23 @@ nav {
     right: -100%;
     top: 0;
     text-align: center;
-    padding: 80px 0;
+    padding: 70px 0;
     line-height: normal;
     transition: 0.7s;
   }
   .menu a {
     display: block;
-    padding: 20px;
+    padding: 25px;
    
   }
- 
-  .hide-menu-btn {
+ .v-icon{
+   color:white;
+   
+ }
+  .esconde-menu-btn {
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 5px;
+    right: 15px;
   }
   #chk:checked ~ .menu {
     right: 0;

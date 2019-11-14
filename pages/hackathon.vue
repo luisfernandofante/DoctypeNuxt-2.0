@@ -11,66 +11,55 @@
       <h4 class="text-center sub-parallax">A 12º edição está de outro mundo!</h4>
     </v-parallax>
 
-    <!-- seção que vai o formulário -->
-    <section class="contato-section" title="Aviso sobre Hackathon">
-      <h2 class="section-titulo">{Hackathon}</h2>
-      <p class="texto">
-        Plunct, Plact, Zum! Não haverá #Hackaton algum... se você não se
-        inscrever! Apresse-se e garanta seu passaporte para embarcar na 12º Edição.
-        <strong>
-          Inscrições válidas até
-          <time datetime="”03-12-2019”">03/12</time>
-        </strong>.
-      </p>
-      <img class="patricio" src="../assets/planet.svg" alt="ícone de planetas" />
-      <!-- aqui vai um formulário -->
 
-      <v-row justify="space-around">
 
-        <v-form ref="form" 
-        v-model="valid" 
-        lazy-validation
-        id="formulario"
-        >
+    <section class="sobre-section" title="Hackathon 2019">
+      <div class="interior-width">
+        <div class="sobre-section-linha">
+          <div class="sobre-section-coluna">
+        
+            <section class="sobre texto" title="Inscrição">
+              <h2 class="section-titulo">{Hackathon}</h2>Plunct, Plact, Zum! Não haverá #Hackaton algum... se você não se
+              inscrever! Apresse-se e garanta seu passaporte para embarcar na 12º Edição.
+              <strong>
+                Inscrições válidas até
+                <time datetime="”03-12-2019”">03/12</time>
+              </strong>.
+              <img class="patricio" src="../assets/planet.svg" alt="ícone de planetas" />
+            </section>
+          </div>
 
-          <v-text-field 
-          v-model="name" 
-          :rules="nameRules" 
-          label="Nome" 
-          required>
-          </v-text-field>
+          <section class="sobre-section-coluna" title="Formulário de inscrição">
+            <v-row justify="space-around">
+              <v-form ref="form" v-model="valid" lazy-validation id="formulario">
+                <v-text-field v-model="name" :rules="nameRules" label="Nome" required></v-text-field>
 
-          <v-text-field 
-          v-model="email" 
-          :rules="emailRules" 
-          label="E-mail" 
-          required>
-          </v-text-field>
+                <v-text-field v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
 
-          <v-select
-            v-model="select"
-            :items="items"
-            :rules="[v => !!v || 'Estado é Necessário']"
-            label="Estado"
-            required
-          ></v-select>
+                <v-select
+                  v-model="select"
+                  :items="items"
+                  :rules="[v => !!v || 'Estado é Necessário']"
+                  label="Estado"
+                  required
+                ></v-select>
 
-          <v-select
-            v-model="select"
-            :items="items2"
-            :rules="[v => !!v || 'Cidade é Necessário']"
-            label="Cidade"
-            required
-          ></v-select>
+                <v-select
+                  v-model="select"
+                  :items="items2"
+                  :rules="[v => !!v || 'Cidade é Necessário']"
+                  label="Cidade"
+                  required
+                ></v-select>
 
-          <button :disabled="!valid" @click="validate" id="button">
-            Enviar
-          </button>
-          
-        </v-form>
-      </v-row>
+                <button :disabled="!valid" @click="validate" id="button">Enviar</button>
+              </v-form>
+            </v-row>
+          </section>
+        </div>
+      </div>
     </section>
-
+    
     <section class="sobre-section">
       <div class="interior-width">
         <div class="sobre-section-linha">
@@ -98,7 +87,9 @@
                   <h3 class="servico-titulo-hack">Posso escolher minha equipe?</h3>Não. As equipes serão organizadas no dia na hora do evento. Valorizamos o trabalho em equipe independentemente de quem sejam os envolvidos.
                 </li>
                 <li class="servico-desc">
-                  <h3 class="servico-titulo-hack">As esquipes serão compostas por quantos integrantes?</h3>As equipes terão entre 2 à 5 integrantes no máximo.
+                  <h3
+                    class="servico-titulo-hack"
+                  >As esquipes serão compostas por quantos integrantes?</h3>As equipes terão entre 2 à 5 integrantes no máximo.
                 </li>
               </ul>
             </section>
@@ -149,7 +140,7 @@
         <!-- título -->
         <h2 class="section-titulo">{Vencedores 2018}</h2>
         <p class="texto">Equipe campeãe da 11º edição - Megazord!</p>
-        <img class="patricio" src="../assets/alien.svg" alt="ícone de um alienígena" />
+        <img class="etornico" src="../assets/alien.svg" alt="ícone de um alienígena" />
         <div class="sobre-section-linha">
           <div class="sobre-section-coluna">
             <section class="sobre" title="Equipe vencedora em reunião com superior">
@@ -186,9 +177,7 @@ export default {
   data: () => ({
     valid: true,
     name: "",
-    nameRules: [
-      v => !!v || "Nome é necessário",
-    ],
+    nameRules: [v => !!v || "Nome é necessário"],
 
     email: "",
     emailRules: [
@@ -196,18 +185,9 @@ export default {
       v => /.+@.+\..+/.test(v) || "E-mail Não Válido"
     ],
     select: null,
-    items: [
-    "Amazonas", 
-    "São Paulo", 
-    "Rio de Janeiro", 
-    "Rio Grande do Sul"
-    ],
+    items: ["Amazonas", "São Paulo", "Rio de Janeiro", "Rio Grande do Sul"],
     select: null,
-    items2: [
-    "Taquaritinga", 
-    "São Paulo", 
-    "Rio de Janeiro", 
-    "Santa Catarina"],
+    items2: ["Taquaritinga", "São Paulo", "Rio de Janeiro", "Santa Catarina"]
   }),
 
   methods: {
@@ -226,8 +206,8 @@ p {
   padding-top: 10px;
   /* font-weight: bold; */
 }
-h3{
-  color:#1e272e;
+h3 {
+  color: #1e272e;
 }
 li {
   list-style: none;

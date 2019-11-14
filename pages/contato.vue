@@ -6,7 +6,7 @@
       <div class="meio-width">
         <h2 class="section-titulo">{Contato}</h2>
         <p>Nosso suporte "Patrício, o Ornitorrinco" adora receber menssagens!</p>
-        <img class="patricio" src="../assets/platypus.svg" alt="ícone de um ornitorrinco" />
+        <img class="etornico" src="../assets/platypus.svg" alt="ícone de um ornitorrinco" />
       </div>
 
       <v-row justify="space-around">
