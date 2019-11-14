@@ -287,10 +287,6 @@ body {
   }
  
 }
-// .patricio{
-//   width: 15%;
-//   height: 20%;
-// }
 
 @media screen and (min-width: 960px) {
   .box {
