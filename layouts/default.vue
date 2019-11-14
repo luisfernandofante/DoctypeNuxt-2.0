@@ -20,7 +20,9 @@ $P-parallax: 1.2rem; /*sub desktop parallax*/
 $Icone: 33px;
 $Descrição: 16px;
 $Negrito: bolder;
-
+template{
+  scroll-behavior: smooth;  
+}
 %titulos{
   text-transform: $Capslock; 
   font-size: $Título-Section;
