@@ -16,35 +16,17 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item @click="entra2">
-          <v-list-item-action>
-            <v-icon>mdi-playlist-edit</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Editar usuário</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-         <v-list-item @click="entra3">
-          <v-list-item-action>
-            <v-icon>mdi-playlist-edit</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Incluir usuário</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
       </v-list>
     </v-navigation-drawer>
 
     <v-app-bar
       app
       clipped-left
-      class="deep-purple accent-4"
+      class="grey darken-4"
       justify="space-between"
     >
-          <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-          <v-toolbar-title>Administração</v-toolbar-title>
+          <v-app-bar-nav-icon class="white--text" @click.stop="drawer = !drawer" />
+          <v-toolbar-title class="white--text">Administração</v-toolbar-title>
 
           <v-spacer></v-spacer>
 
@@ -70,14 +52,8 @@
       entrar(){
         this.$router.push('usuarios')
       },
-      entra2(){
-        this.$router.push('usuarios/_id')
-      },
-      entra3(){
-        this.$router.push('usuarios/incluir')
-      },
       sair(){
-        this.$router.push('/admin/login')
+        this.$router.push('/')
       }
     }
     

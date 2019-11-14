@@ -16,13 +16,13 @@
           >
             <v-card class="elevation-12">
               <v-toolbar
-                color="primary"
+                color="grey darken-4"
                 flat
               >
-                <v-toolbar-title >Login</v-toolbar-title> 
+                <v-toolbar-title class="white--text" >Login</v-toolbar-title> 
                 <v-spacer></v-spacer>
 
-                <v-btn @click="voltar">Voltar</v-btn>
+                
                 
               </v-toolbar>
               <v-card-text>
@@ -46,6 +46,7 @@
               <v-card-actions>
                 <v-spacer />
                 <v-btn color="primary" @click="acessar">Entrar</v-btn>
+                <v-btn @click="voltar">Voltar</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
