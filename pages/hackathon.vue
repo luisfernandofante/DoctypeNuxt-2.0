@@ -91,6 +91,11 @@
                     class="servico-titulo-hack"
                   >As esquipes serão compostas por quantos integrantes?</h3>As equipes terão entre 2 à 5 integrantes no máximo.
                 </li>
+                  <li class="servico-desc">
+                  <h3
+                    class="servico-titulo-hack"
+                  >Ainda está com dúvidas?</h3>Fique a vontade para falar com a gente no e-mail doctype@suporte.com!
+                </li>
               </ul>
             </section>
           </div>
@@ -126,40 +131,25 @@
         </div>
       </div>
     </section>
-    <!-- seção que vai o formulário -->
-    <!-- <section class="contato-section" title="Informação Hackathon">
-      <h2 class="section-titulo">{vencedores 2018}</h2>
-      <p class="texto">
-        Conheça a equipe campeã da 11º edição!
-      </p>
-      <img class="patricio" src="../assets/alien.svg" alt="ícone de um alienígena" />
    
-    </section>-->
-    <section class="contato-section" title="Grupo vencedor do Hackathon 2018">
+ <section class="sobre-section" title="Vencedores Hackathon 2018">
       <div class="interior-width">
         <!-- título -->
-        <h2 class="section-titulo">{Vencedores 2018}</h2>
-        <p class="texto">Equipe campeãe da 11º edição - Megazord!</p>
-        <img class="etornico" src="../assets/alien.svg" alt="ícone de um alienígena" />
+      
         <div class="sobre-section-linha">
           <div class="sobre-section-coluna">
-            <section class="sobre" title="Equipe vencedora em reunião com superior">
-              <img
-                class="time"
-                src="../assets/equipe.jpg"
-                alt="Equipe 'Megazord' vencedora do hackathon 2018 reunida em uma sala com a diretora de recursos Humanos, Kássia Boch. A imagem contém ao todo 6 pessoas. "
-              />
+            <!-- texto sobre a empresa -->
+            <section class="sobre">
+                <h2 class="section-titulo">{Vencedores 2018}</h2>
+              <img class="time" src="../assets/grupohack.png" alt="">
             </section>
           </div>
           <section class="sobre-section-coluna" title="vídeo da empresa">
-            <section class="sobre" title="Sobre a equipe">
-              <p>A equipe carinhosamente apelidada de 'Megazord' se destacou no último Hackathon pelo seu ótimo desenpenho na organização de tarefas em equipe, e claro, o projeto entregue.</p>
-            </section>
+           <p>Venha fazer parte do nosso time você também!</p>
           </section>
         </div>
       </div>
     </section>
-
     <app-footer />
   </div>
 </template>

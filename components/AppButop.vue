@@ -15,7 +15,7 @@ export default {
   position: fixed;
   width: 50px;
   height: 50px;
-  background: #27ae60;
+  background: #22a6b3;
   opacity: 0.8;
   border-radius: 10px;
   bottom: 40px;

@@ -91,7 +91,7 @@ export default {
   text-align: center;
 }
 .item{
-    background-color: whitesmoke;
+    background-color: #dfe6e9;
     margin: 20px;
     padding: 10px;
    
