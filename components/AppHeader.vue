@@ -18,12 +18,12 @@
         </label>
 
         <ul class="menu"> 
-          <a href="/"  accesskey="1" title="Início [ALT+1]">Início [ALT+1]</a>
-          <a href="/pacotes" accesskey="2" title="Pacotes [ALT+2]">Pacotes [ALT+2]</a>
-          <a href="/hackathon" accesskey="3"  title="Hackathon [ALT+3]">Hackathon [ALT+3]</a>
-          <a href="/sobre" accesskey="4"  title="Sobre [ALT+4]">Sobre [ALT+4]</a>
-          <a href="/contato"   accesskey="5"  title="Contato [ALT+5]">Contato [ALT+5]</a>
-          <a href="admin/login" accesskey="6"  title="Login [ALT+6]">Login [ALT+6] </a>
+          <a href="/"  accesskey="1" title="Início [ALT+1]">Início</a>
+          <a href="/pacotes" accesskey="2" title="Pacotes [ALT+2]">Pacotes</a>
+          <a href="/hackathon" accesskey="3"  title="Hackathon [ALT+3]">Hackathon</a>
+          <a href="/sobre" accesskey="4"  title="Sobre [ALT+4]">Sobre</a>
+          <a href="/contato"   accesskey="5"  title="Contato [ALT+5]">Contato</a>
+          <a href="admin/login" accesskey="6"  title="Login [ALT+6]">Login</a>
           <label for="chk" class="esconde-menu-btn">
             <v-icon large>mdi-close</v-icon>
           </label>

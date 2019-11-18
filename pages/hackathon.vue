@@ -11,13 +11,10 @@
       <h4 class="text-center sub-parallax">A 12º edição está de outro mundo!</h4>
     </v-parallax>
 
-
-
     <section class="sobre-section" title="Hackathon 2019">
       <div class="interior-width">
         <div class="sobre-section-linha">
           <div class="sobre-section-coluna">
-        
             <section class="sobre texto" title="Inscrição">
               <h2 class="section-titulo">{Hackathon}</h2>Plunct, Plact, Zum! Não haverá #Hackaton algum... se você não se
               inscrever! Apresse-se e garanta seu passaporte para embarcar na 12º Edição.
@@ -59,7 +56,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="sobre-section">
       <div class="interior-width">
         <div class="sobre-section-linha">
@@ -91,10 +88,8 @@
                     class="servico-titulo-hack"
                   >As esquipes serão compostas por quantos integrantes?</h3>As equipes terão entre 2 à 5 integrantes no máximo.
                 </li>
-                  <li class="servico-desc">
-                  <h3
-                    class="servico-titulo-hack"
-                  >Ainda está com dúvidas?</h3>Fique a vontade para falar com a gente no e-mail doctype@suporte.com!
+                <li class="servico-desc">
+                  <h3 class="servico-titulo-hack">Ainda está com dúvidas?</h3>Fique a vontade para falar com a gente no e-mail doctype@suporte.com!
                 </li>
               </ul>
             </section>
@@ -131,21 +126,39 @@
         </div>
       </div>
     </section>
-   
- <section class="sobre-section" title="Vencedores Hackathon 2018">
+
+    <section class="sobre-section" title="Prêmios 2019">
       <div class="interior-width">
         <!-- título -->
-      
+
         <div class="sobre-section-linha">
           <div class="sobre-section-coluna">
             <!-- texto sobre a empresa -->
             <section class="sobre">
-                <h2 class="section-titulo">{Vencedores 2018}</h2>
-              <img class="time" src="../assets/grupohack.png" alt="">
+              <h2 class="section-titulo">{Prêmios} (◕ᴗ◕)</h2>
+              <hr class="border" />
+              <!-- <img class="time" src="../assets/grupohack.png" alt=""> -->
             </section>
+            <p class="texto">Pois nem relógio trabalha de graça! </p>
+            <p class="texto"></p>
+              <ul>
+                <li class="servico-desc" title="Primeiro lugar">
+                  <h3 class="servico-titulo-hack">1ºlugar</h3>Estágio de 1 ano, remunerado, no Q.G &lt;!Doctype&gt; mais próximo de você, mimos por conta da casa (notebooks da ACER) e R$2000,00 por integrante.
+                </li>
+
+                <li class="servico-desc">
+                  <h3 class="servico-titulo-hack" title="Segundo lugar">2ºlugar</h3>R$1000,00 por integrante .
+                </li>
+
+                <li class="servico-desc">
+                  <h3 class="servico-titulo-hack" title="Terceiro lugar">3ºlugar</h3>R$500,00 por integrante.
+                </li>
+              </ul>
           </div>
-          <section class="sobre-section-coluna" title="vídeo da empresa">
-           <p>Venha fazer parte do nosso time você também!</p>
+          <section class="sobre-section-coluna" title="Apoiadores">
+             <h2 class="section-titulo">{Apoiadores} ʕ •ᴥ•ʔ</h2>
+             <hr class="border">
+             <p class="texto">Obrigado pelo apoio, amigos!</p>
           </section>
         </div>
       </div>

@@ -10,9 +10,11 @@ export default {
 }
 </script>
 
-<style scoped>
-.gotopbtn{
+<style>
+body{
   scroll-behavior: smooth;
+}
+.gotopbtn{
   position: fixed;
   width: 50px;
   height: 50px;
