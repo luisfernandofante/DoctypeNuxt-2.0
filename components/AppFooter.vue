@@ -59,12 +59,12 @@
     
     </footer>
       <app-butop/>
+   
     <!-- final do footer -->
   </div>
 </template>
 <script>
  import AppButop from './AppButop'
-  
 export default {
   components:{
     AppButop,

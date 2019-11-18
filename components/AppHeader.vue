@@ -2,6 +2,7 @@
   <div>
     <header>
       <nav>
+      
         <a href="/">
           <img
             class="logo"
@@ -10,35 +11,43 @@
             title="<!DOCTYPE>"
           />
         </a>
-
+           <app-acess/>
         <input type="checkbox" id="chk" />
         <label for="chk" class="mostra-menu-btn">
        <v-icon large>mdi-menu</v-icon>
         </label>
 
-        <ul class="menu">
-          <a href="/" title="Início">Início</a>
-          <a href="/pacotes" title="Pacotes">Pacotes</a>
-          <a href="/hackathon" title="Hackathon">Hackathon</a>
-          <a href="/sobre" title="Sobre">Sobre</a>
-          <a href="/contato" title="Contato">Contato</a>
-          <a href="admin/login" title="Login">Login</a>
+        <ul class="menu"> 
+          <a href="/"  accesskey="1" title="Início [ALT+1]">Início [ALT+1]</a>
+          <a href="/pacotes" accesskey="2" title="Pacotes [ALT+2]">Pacotes [ALT+2]</a>
+          <a href="/hackathon" accesskey="3"  title="Hackathon [ALT+3]">Hackathon [ALT+3]</a>
+          <a href="/sobre" accesskey="4"  title="Sobre [ALT+4]">Sobre [ALT+4]</a>
+          <a href="/contato"   accesskey="5"  title="Contato [ALT+5]">Contato [ALT+5]</a>
+          <a href="admin/login" accesskey="6"  title="Login [ALT+6]">Login [ALT+6] </a>
           <label for="chk" class="esconde-menu-btn">
             <v-icon large>mdi-close</v-icon>
           </label>
+           
         </ul>
       </nav>
     </header>
   </div>
 </template>
-
+<script>
+ import AppAcess from './AppAcess'
+  
+export default {
+  components:{
+    AppAcess,
+  }
+}
+</script>
 <style scoped>
 
 header {
   height: 100px;
   background: black;
   padding: 0 20px;
-
   display: flex;
 }
 
@@ -46,6 +55,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {

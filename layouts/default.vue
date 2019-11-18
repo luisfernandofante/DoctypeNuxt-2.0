@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss">
-    $Preto: black;
+$Preto: black;
 $Branco: white;
 $Gelo: #ddd;
 $Verde:#2ecc71;

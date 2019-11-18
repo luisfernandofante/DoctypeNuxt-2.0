@@ -12,6 +12,7 @@ export default {
 
 <style scoped>
 .gotopbtn{
+  scroll-behavior: smooth;
   position: fixed;
   width: 50px;
   height: 50px;
