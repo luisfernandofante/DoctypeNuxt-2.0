@@ -11,50 +11,47 @@
       <h4 class="text-center sub-parallax">A 12º edição está de outro mundo!</h4>
     </v-parallax>
 
-    <section class="sobre-section" title="Hackathon 2019">
-      <div class="interior-width">
-        <div class="sobre-section-linha">
-          <div class="sobre-section-coluna">
-            <section class="sobre texto" title="Inscrição">
-              <h2 class="section-titulo">{Hackathon}</h2>Plunct, Plact, Zum! Não haverá #Hackaton algum... se você não se
-              inscrever! Apresse-se e garanta seu passaporte para embarcar na 12º Edição.
-              <strong>
-                Inscrições válidas até
-                <time datetime="”03-12-2019”">03/12</time>
-              </strong>.
-              <img class="patricio" src="../assets/planet.svg" alt="ícone de planetas" />
-            </section>
-          </div>
+    <!-- seção que vai o formulário -->
+    <section class="contato-section" title="Aviso sobre Hackathon">
+      <h2 class="section-titulo">{Hackathon}</h2>
+      <p class="texto">
+        Plunct, Plact, Zum! Não haverá #Hackaton algum... se você não se
+        inscrever! Apresse-se e garanta seu passaporte para embarcar na 12º Edição.
+        <strong>
+          Inscrições válidas até
+          <time datetime="”03-12-2019”">03/12</time>
+        </strong>.
+      </p>
+      <img class="patricio" src="../assets/planet.svg" alt="ícone de planetas" />
+      <!-- aqui vai um formulário -->
 
-          <section class="sobre-section-coluna" title="Formulário de inscrição">
-            <v-row justify="space-around">
-              <v-form ref="form" v-model="valid" lazy-validation id="formulario">
-                <v-text-field v-model="name" :rules="nameRules" label="Nome" required></v-text-field>
+      <v-row justify="space-around">
 
-                <v-text-field v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
+        <v-form ref="form" 
+        v-model="valid" 
+        lazy-validation
+        id="formulario"
+        >
+          <v-text-field 
+          v-model="name" 
+          :rules="nameRules" 
+          label="Nome" 
+          required>
+          </v-text-field>
 
-                <v-select
-                  v-model="select"
-                  :items="items"
-                  :rules="[v => !!v || 'Estado é Necessário']"
-                  label="Estado"
-                  required
-                ></v-select>
+          <v-text-field 
+          v-model="email" 
+          :rules="emailRules" 
+          label="E-mail" 
+          required>
+          </v-text-field>
 
-                <v-select
-                  v-model="select"
-                  :items="items2"
-                  :rules="[v => !!v || 'Cidade é Necessário']"
-                  label="Cidade"
-                  required
-                ></v-select>
-
-                <button :disabled="!valid" @click="validate" id="button">Enviar</button>
-              </v-form>
-            </v-row>
-          </section>
-        </div>
-      </div>
+          <button :disabled="!valid" @click="salvar" id="button">
+            Enviar
+          </button>
+          
+        </v-form>
+      </v-row>
     </section>
 
     <section class="sobre-section">
@@ -84,12 +81,7 @@
                   <h3 class="servico-titulo-hack">Posso escolher minha equipe?</h3>Não. As equipes serão organizadas no dia na hora do evento. Valorizamos o trabalho em equipe independentemente de quem sejam os envolvidos.
                 </li>
                 <li class="servico-desc">
-                  <h3
-                    class="servico-titulo-hack"
-                  >As esquipes serão compostas por quantos integrantes?</h3>As equipes terão entre 2 à 5 integrantes no máximo.
-                </li>
-                <li class="servico-desc">
-                  <h3 class="servico-titulo-hack">Ainda está com dúvidas?</h3>Fique a vontade para falar com a gente no e-mail doctype@suporte.com!
+                  <h3 class="servico-titulo-hack">As esquipes serão compostas por quantos integrantes?</h3>As equipes terão entre 2 à 5 integrantes no máximo.
                 </li>
               </ul>
             </section>
@@ -126,43 +118,40 @@
         </div>
       </div>
     </section>
-
-    <section class="sobre-section" title="Prêmios 2019">
+    <!-- seção que vai o formulário -->
+    <!-- <section class="contato-section" title="Informação Hackathon">
+      <h2 class="section-titulo">{vencedores 2018}</h2>
+      <p class="texto">
+        Conheça a equipe campeã da 11º edição!
+      </p>
+      <img class="patricio" src="../assets/alien.svg" alt="ícone de um alienígena" />
+   
+    </section>-->
+    <section class="contato-section" title="Grupo vencedor do Hackathon 2018">
       <div class="interior-width">
         <!-- título -->
-
+        <h2 class="section-titulo">{Vencedores 2018}</h2>
+        <p class="texto">Equipe campeãe da 11º edição - Megazord!</p>
+        <img class="patricio" src="../assets/alien.svg" alt="ícone de um alienígena" />
         <div class="sobre-section-linha">
           <div class="sobre-section-coluna">
-            <!-- texto sobre a empresa -->
-            <section class="sobre">
-              <h2 class="section-titulo">{Prêmios} (◕ᴗ◕)</h2>
-              <hr class="border" />
-              <!-- <img class="time" src="../assets/grupohack.png" alt=""> -->
+            <section class="sobre" title="Equipe vencedora em reunião com superior">
+              <img
+                class="time"
+                src="../assets/equipe.jpg"
+                alt="Equipe 'Megazord' vencedora do hackathon 2018 reunida em uma sala com a diretora de recursos Humanos, Kássia Boch. A imagem contém ao todo 6 pessoas. "
+              />
             </section>
-            <p class="texto">Pois nem relógio trabalha de graça! </p>
-            <p class="texto"></p>
-              <ul>
-                <li class="servico-desc" title="Primeiro lugar">
-                  <h3 class="servico-titulo-hack">1ºlugar</h3>Estágio de 1 ano, remunerado, no Q.G &lt;!Doctype&gt; mais próximo de você, mimos por conta da casa (notebooks da ACER) e R$2000,00 por integrante.
-                </li>
-
-                <li class="servico-desc">
-                  <h3 class="servico-titulo-hack" title="Segundo lugar">2ºlugar</h3>R$1000,00 por integrante .
-                </li>
-
-                <li class="servico-desc">
-                  <h3 class="servico-titulo-hack" title="Terceiro lugar">3ºlugar</h3>R$500,00 por integrante.
-                </li>
-              </ul>
           </div>
-          <section class="sobre-section-coluna" title="Apoiadores">
-             <h2 class="section-titulo">{Apoiadores} ʕ •ᴥ•ʔ</h2>
-             <hr class="border">
-             <p class="texto">Obrigado pelo apoio, amigos!</p>
+          <section class="sobre-section-coluna" title="vídeo da empresa">
+            <section class="sobre" title="Sobre a equipe">
+              <p>A equipe carinhosamente apelidada de 'Megazord' se destacou no último Hackathon pelo seu ótimo desenpenho na organização de tarefas em equipe, e claro, o projeto entregue.</p>
+            </section>
           </section>
         </div>
       </div>
     </section>
+
     <app-footer />
   </div>
 </template>
@@ -176,31 +165,65 @@ export default {
     AppHeader,
     AppFooter
   },
-
+data(){
+    return {
+      id: this.$route.params.id,
+      modo: this.$route.params.id == 'incluir' ? 'Incluir' : 'Editar',
+      name: '',
+      email: '',
+  }
+},
+  
   data: () => ({
     valid: true,
     name: "",
-    nameRules: [v => !!v || "Nome é necessário"],
+    nameRules: [
+      v => !!v || "Nome é necessário",
+    ],
 
     email: "",
     emailRules: [
       v => !!v || "E-mail é necessário",
       v => /.+@.+\..+/.test(v) || "E-mail Não Válido"
     ],
-    select: null,
-    items: ["Amazonas", "São Paulo", "Rio de Janeiro", "Rio Grande do Sul"],
-    select: null,
-    items2: ["Taquaritinga", "São Paulo", "Rio de Janeiro", "Santa Catarina"]
   }),
+
+    created (){
+    const usuarios = this.$ls.get('usuarios')
+    if (usuarios) {
+      const usuario = usuarios.find(u => u.id == this.id)
+      if (usuario) {
+        this.name = usuario.name
+        this.email = usuario.email
+      }
+    }
+},
 
   methods: {
     validate() {
       if (this.$refs.form.validate()) {
         this.snackbar = true;
       }
+    },
+    gerarId () {
+      return Math.round(Math.random() * 9999)
+    },
+    salvar () {
+      let dados = this.$ls.get('usuarios')
+      if (!dados) dados = []
+      dados.push({
+        id: this.gerarId(),
+        name: this.name,
+        email: this.email,
+        
+      })
+      this.$ls.set('usuarios', dados)
+    },
+    cancelar () {
+      this.$router.push('/admin/usuarios')
     }
   }
-};
+  }
 </script>
 
 
@@ -209,8 +232,8 @@ p {
   padding-top: 10px;
   /* font-weight: bold; */
 }
-h3 {
-  color: #1e272e;
+h3{
+  color:#1e272e;
 }
 li {
   list-style: none;

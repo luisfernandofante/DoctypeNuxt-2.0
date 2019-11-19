@@ -1,31 +1,37 @@
 <template>
-  <div>
-    Listagem de usuários
-
+  <v-container>
     <v-data-table
       :headers="headers"
       :items="usuarios"
       sort-by="nome"
       class="elevation-1"
+      :hide-default-footer="true"
     >
       <template v-slot:top>
         <v-toolbar flat color="white">
           <v-toolbar-title>Usuários</v-toolbar-title>
           <v-spacer />
-          <v-btn @click="voltar">Voltar</v-btn>
-          <v-btn color="primary" dark class="mb-2" v-on="on" to="/admin/usuarios/incluir">Incluir</v-btn>
+          <v-btn
+            color="primary"
+            to="/admin/usuarios/incluir"
+            class="elevation-1"
+            small
+            fab
+          >
+            <v-icon>mdi-plus</v-icon>
+          </v-btn>
         </v-toolbar>
       </template>
       <template v-slot:item.action="{ item }">
         <v-icon
-          small
+          color="primary"
           class="mr-2"
           @click="editar(item)"
         >
           mdi-pencil
         </v-icon>
         <v-icon
-          small
+          color="pink"
           @click="excluir(item)"
         >
           mdi-delete
@@ -35,7 +41,7 @@
         Não há registros cadastrados!
       </template>
     </v-data-table>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -43,26 +49,26 @@ export default {
   data () {
     return {
       headers: [
-        { text: 'Nome', value: 'nome' },
-        { text: 'Apelido', value: 'apelido' },
-        { text: 'Ações', value: 'action', sortable: false }
+        { text: 'Nome completo', value: 'name' },
+        { text: 'E-mail', value: 'email' },
+        { text: 'Ações', value: 'action', sortable: false, width: 100 }
       ],
-
       usuarios: []
     }
   },
-
   created () {
     const usuarios = this.$ls.get('usuarios')
     if (usuarios) this.usuarios = usuarios
   },
-
   methods: {
     editar (item) {
       this.$router.push(`/admin/usuarios/${item.id}`)
     },
-    voltar(){
-        this.$router.push('/admin/dashboard')
+    excluir (item) {
+      let dados = this.$ls.get('usuarios')
+      dados = dados.filter(u => u.id != item.id)
+      this.$ls.set('usuarios', dados)
+      this.usuarios = dados
     }
   }
 }

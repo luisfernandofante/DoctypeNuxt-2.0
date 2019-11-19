@@ -18,12 +18,12 @@
         </label>
 
         <ul class="menu"> 
-          <a href="/"  accesskey="1" title="Início [ALT+1]">Início</a>
-          <a href="/pacotes" accesskey="2" title="Pacotes [ALT+2]">Pacotes</a>
-          <a href="/hackathon" accesskey="3"  title="Hackathon [ALT+3]">Hackathon</a>
-          <a href="/sobre" accesskey="4"  title="Sobre [ALT+4]">Sobre</a>
-          <a href="/contato"   accesskey="5"  title="Contato [ALT+5]">Contato</a>
-          <a href="admin/login" accesskey="6"  title="Login [ALT+6]">Login</a>
+          <nuxt-link to="/"  accesskey="1" title="Início [ALT+1]">Início</nuxt-link>
+          <nuxt-link to="/pacotes" accesskey="2" title="Pacotes [ALT+2]">Pacotes</nuxt-link>
+          <nuxt-link to="/hackathon" accesskey="3"  title="Hackathon [ALT+3]">Hackathon</nuxt-link>
+          <nuxt-link to="/sobre" accesskey="4"  title="Sobre [ALT+4]">Sobre</nuxt-link>
+          <nuxt-link to="/contato"   accesskey="5"  title="Contato [ALT+5]">Contato</nuxt-link>
+          <nuxt-link to="admin/login" accesskey="6"  title="Login [ALT+6]">Login</nuxt-link>
           <label for="chk" class="esconde-menu-btn">
             <v-icon large>mdi-close</v-icon>
           </label>
@@ -76,10 +76,12 @@ nav {
   transition: 0.4s;
 
 }
-.menu a:hover{
- text-decoration: line-through;
+.v-application .menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover,
+.menu a.nuxt-link-exact-active{
+  color: purple;
 }
-
 .mostra-menu-btn,
 .esconde-menu-btn {
   transition: 0.4s;
