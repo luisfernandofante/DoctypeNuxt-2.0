@@ -22,7 +22,9 @@
           </v-btn>
         </v-toolbar>
       </template>
-      <template v-slot:item.action="{ item }">
+      <template v-slot:item.action="{ item }"
+      class="text-justify"
+      >
         <v-icon
           color="primary"
           class="mr-2"
@@ -49,8 +51,15 @@ export default {
   data () {
     return {
       headers: [
-        { text: 'Nome completo', value: 'name' },
-        { text: 'E-mail', value: 'email' },
+        { text: 'Nome completo', value: 'name', sortable:false, width:200 },
+        { text: 'E-mail', value: 'email', sortable:false, width:200},
+        { text: 'Data de Nascimento', value: 'nascimento', sortable:false, width:100 },
+        { text: 'Faculdade', value: 'faculdade', sortable:false, width:100 },
+        { text: 'Curso', value: 'curso' , sortable:false, width:100},
+        { text: 'Estado', value: 'estado' , sortable:false, width:100},
+        { text: 'Cidade', value: 'cidade' , sortable:false, width:100},
+        { text: 'Endereço', value: 'endereco' , sortable:false, width:100},
+        { text: 'Telefone', value: 'telefone' , sortable:false, width:100},
         { text: 'Ações', value: 'action', sortable: false, width: 100 }
       ],
       usuarios: []

@@ -36,6 +36,7 @@
           v-model="name" 
           :rules="nameRules" 
           label="Nome" 
+          color="purple darken-4"
           required>
           </v-text-field>
 
@@ -43,6 +44,63 @@
           v-model="email" 
           :rules="emailRules" 
           label="E-mail" 
+          color="purple darken-4"
+          required>
+          </v-text-field>
+
+          <v-text-field 
+          v-model="nascimento" 
+          :rules="nascimentoRules" 
+          label="Data de Nascimento"
+          color="purple darken-4" 
+          required>
+          </v-text-field>
+
+          <v-text-field 
+          v-model="faculdade" 
+          :rules="faculdadeRules" 
+          label="Faculdade" 
+          color="purple darken-4"
+          required>
+          </v-text-field>
+
+          <v-text-field 
+          v-model="curso" 
+          :rules="cursoRules" 
+          label="Curso" 
+          color="purple darken-4"
+          required>
+          </v-text-field>
+
+          <v-text-field 
+          v-model="estado" 
+          :rules="estadoRules" 
+          label="Estado" 
+          color="purple darken-4"
+          required>
+          </v-text-field>
+
+          <v-text-field 
+          v-model="cidade" 
+          :rules="cidadeRules" 
+          label="Cidade" 
+          color="purple darken-4"
+          required>
+          </v-text-field>
+
+          <v-text-field 
+          v-model="endereco" 
+          :rules="cursoRules" 
+          label="Endereço" 
+          color="purple darken-4"
+          required>
+          </v-text-field>
+
+          <v-text-field 
+          v-model="telefone" 
+          :rules="telefoneRules" 
+          label="Telefone +(DD)" 
+          color="purple darken-4"
           required>
           </v-text-field>
 
@@ -171,6 +229,13 @@ data(){
       modo: this.$route.params.id == 'incluir' ? 'Incluir' : 'Editar',
       name: '',
       email: '',
+      nascimento:'',
+      faculdade:'',
+      curso:'',
+      endereco:'',
+      estado:'',
+      cidade:'',
+      telefone:'',
   }
 },
   
@@ -180,12 +245,17 @@ data(){
     nameRules: [
       v => !!v || "Nome é necessário",
     ],
-
+  
     email: "",
     emailRules: [
       v => !!v || "E-mail é necessário",
       v => /.+@.+\..+/.test(v) || "E-mail Não Válido"
     ],
+    telefone:"",
+    telefoneRules:[
+      v => !!v || "Telefone é Necessário",
+      v => (v && v.length <= 11) || 'Telefone deve ter no máximo 11 caracteres',
+    ]
   }),
 
     created (){
@@ -195,6 +265,13 @@ data(){
       if (usuario) {
         this.name = usuario.name
         this.email = usuario.email
+        this.nascimento = usuario.nascimento
+        this.faculdade = usuario.faculdade
+        this.curso = usuario.curso
+        this.endereco = usuario.endereco
+        this.estado = usuario.estado
+        this.cidade = usuario.estado
+        this.telefone = usuario.telefone
       }
     }
 },
@@ -215,13 +292,21 @@ data(){
         id: this.gerarId(),
         name: this.name,
         email: this.email,
+        nascimento: this.nascimento,
+        faculdade: this.faculdade,
+        curso: this.curso,
+        estado: this.estado,
+        endereco: this.endereco,
+        cidade: this.cidade,
+        telefone: this.telefone,
+
         
       })
       this.$ls.set('usuarios', dados)
     },
     cancelar () {
       this.$router.push('/admin/usuarios')
-    }
+    },
   }
   }
 </script>
@@ -245,7 +330,9 @@ h2::after {
   display: inline-block;
   animation: pisca 0.7s infinite;
 }
-
+.v-text-field label{
+  color: black;
+}
 .time {
   height: 100%;
   margin-top: 15px;
