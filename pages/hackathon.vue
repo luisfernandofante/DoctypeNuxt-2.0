@@ -93,7 +93,7 @@
           <h2 class="section-titulo">{Premiação}</h2>
           <ul>
             <li class="servico-desc">
-              <h3 class="servico-titulo-hack">1ºlugar</h3>Estágio de 1 ano (remunerado) no Q.G &lt;!Doctype&gt; mais próximo de você! notebooks Acer e R$2000,00 para cada integrante.
+              <h3 class="servico-titulo-hack">1ºlugar</h3>Estágio de 1 ano (remunerado), notebooks Acer e R$2000,00 para cada integrante.
             </li>
 
             <li class="servico-desc">
