@@ -80,7 +80,7 @@ nav {
 .show-menu-btn:hover,
 .hide-menu-btn:hover,
 .menu a.nuxt-link-exact-active{
-  color: purple;
+ text-decoration: line-through;
 }
 .mostra-menu-btn,
 .esconde-menu-btn {
