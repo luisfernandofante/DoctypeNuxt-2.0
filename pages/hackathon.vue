@@ -7,109 +7,108 @@
       :src="require('assets/espaco-hackathon.jpg')"
       alt="imagem contendo ilustração de planetas e estrelas"
     >
-      <h1 class="text-center titulo-parallax">#HACKATHON &lt;!DOCTYPE&gt;</h1>
+      <h1 class="text-center titulo-parallax">{HACKATHON}</h1>
       <h4 class="text-center sub-parallax">A 12º edição está de outro mundo!</h4>
     </v-parallax>
 
-    <!-- seção que vai o formulário -->
-    <section class="contato-section" title="Aviso sobre Hackathon">
-      <h2 class="section-titulo">{Hackathon}</h2>
-      <p class="texto">
-        Plunct, Plact, Zum! Não haverá #Hackaton algum... se você não se
-        inscrever! Apresse-se e garanta seu passaporte para embarcar na 12º Edição.
-        <strong>
-          Inscrições válidas até
-          <time datetime="”03-12-2019”">03/12</time>
-        </strong>.
-      </p>
-      <img class="patricio" src="../assets/planet.svg" alt="ícone de planetas" />
-      <!-- aqui vai um formulário -->
+    <section class="sobre-section" title="Sobre nós">
+      <!-- título -->
+      <div class="sobre-section-linha">
+        <div class="sobre-section-coluna">
+          <!-- texto sobre a empresa -->
+          <h2 class="section-titulo">{Inscrições}</h2>
+          <section class="sobre" title="Formulário de inscrições">
+            <p class="texto">
+              Plunct, Plact, Zum! Não haverá #Hackaton algum... se você não se
+              inscrever! Apresse-se e garanta seu passaporte para embarcar na 12º Edição.
+              <strong>
+                Inscrições válidas até
+                <time datetime="”03-12-2019”">03/12</time>
+              </strong>.
+            </p>
+            <v-row justify="center">
+              <v-form ref="form" v-model="valid" lazy-validation id="formulario">
+                <v-text-field
+                  v-model="name"
+                  :rules="nameRules"
+                  label="Nome completo"
+                  color="purple darken-4"
+                  required
+                ></v-text-field>
 
-      <v-row justify="space-around">
+                <v-text-field
+                  v-model="email"
+                  :rules="emailRules"
+                  label="E-mail"
+                  color="purple darken-4"
+                  required
+                ></v-text-field>
 
-        <v-form ref="form" 
-        v-model="valid" 
-        lazy-validation
-        id="formulario"
-        >
-          <v-text-field 
-          v-model="name" 
-          :rules="nameRules" 
-          label="Nome" 
-          color="purple darken-4"
-          required>
-          </v-text-field>
+                <v-text-field
+                  v-model="idade"
+                  :rules="idadeRules"
+                  label="Idade"
+                  color="purple darken-4"
+                  required
+                ></v-text-field>
 
-          <v-text-field 
-          v-model="email" 
-          :rules="emailRules" 
-          label="E-mail" 
-          color="purple darken-4"
-          required>
-          </v-text-field>
+                <v-text-field
+                  v-model="cidade"
+                  :rules="cidadeRules"
+                  label="Cidade"
+                  color="purple darken-4"
+                  required
+                ></v-text-field>
 
-          <v-text-field 
-          v-model="nascimento" 
-          :rules="nascimentoRules" 
-          label="Data de Nascimento"
-          color="purple darken-4" 
-          required>
-          </v-text-field>
+                <v-text-field
+                  v-model="estado"
+                  :rules="estadoRules"
+                  label="Estado"
+                  color="purple darken-4"
+                  required
+                ></v-text-field>
 
-          <v-text-field 
-          v-model="faculdade" 
-          :rules="faculdadeRules" 
-          label="Faculdade" 
-          color="purple darken-4"
-          required>
-          </v-text-field>
+                <v-text-field
+                  v-model="endereco"
+                  :rules="cursoRules"
+                  label="Endereço"
+                  color="purple darken-4"
+                  required
+                ></v-text-field>
 
-          <v-text-field 
-          v-model="curso" 
-          :rules="cursoRules" 
-          label="Curso" 
-          color="purple darken-4"
-          required>
-          </v-text-field>
+                <v-text-field
+                  v-model="telefone"
+                  :rules="telefoneRules"
+                  label="Telefone +(DD)"
+                  color="purple darken-4"
+                  required
+                ></v-text-field>
 
-          <v-text-field 
-          v-model="estado" 
-          :rules="estadoRules" 
-          label="Estado" 
-          color="purple darken-4"
-          required>
-          </v-text-field>
+                <button :disabled="!valid" @click="salvar" id="button">Enviar</button>
+              </v-form>
+            </v-row>
+          </section>
+        </div>
+        <section class="sobre-section-coluna" title="formulário de inscrição">
+          <h2 class="section-titulo">{Premiação}</h2>
+          <ul>
+            <li class="servico-desc">
+              <h3 class="servico-titulo-hack">1ºlugar</h3>Estágio de 1 ano (remunerado) no Q.G &lt;!Doctype&gt; mais próximo de você! notebooks Acer e R$2000,00 para cada integrante.
+            </li>
 
-          <v-text-field 
-          v-model="cidade" 
-          :rules="cidadeRules" 
-          label="Cidade" 
-          color="purple darken-4"
-          required>
-          </v-text-field>
+            <li class="servico-desc">
+              <h3 class="servico-titulo-hack">2ºlugar</h3>R$1000,00 para cada integrante.
+            </li>
 
-          <v-text-field 
-          v-model="endereco" 
-          :rules="cursoRules" 
-          label="Endereço" 
-          color="purple darken-4"
-          required>
-          </v-text-field>
-
-          <v-text-field 
-          v-model="telefone" 
-          :rules="telefoneRules" 
-          label="Telefone +(DD)" 
-          color="purple darken-4"
-          required>
-          </v-text-field>
-
-          <button :disabled="!valid" @click="salvar" id="button">
-            Enviar
-          </button>
-          
-        </v-form>
-      </v-row>
+            <li class="servico-desc">
+              <h3 class="servico-titulo-hack">3ºlugar</h3>R$500,00 para cada integrante.
+            </li>
+          </ul>
+          <div class="contato-section">
+            <img class="patricio" src="../assets/planet.svg" alt />
+          </div>
+        </section>
+      </div>
     </section>
 
     <section class="sobre-section">
@@ -139,7 +138,12 @@
                   <h3 class="servico-titulo-hack">Posso escolher minha equipe?</h3>Não. As equipes serão organizadas no dia na hora do evento. Valorizamos o trabalho em equipe independentemente de quem sejam os envolvidos.
                 </li>
                 <li class="servico-desc">
-                  <h3 class="servico-titulo-hack">As esquipes serão compostas por quantos integrantes?</h3>As equipes terão entre 2 à 5 integrantes no máximo.
+                  <h3
+                    class="servico-titulo-hack"
+                  >As esquipes serão compostas por quantos integrantes?</h3>As equipes terão entre 2 à 5 integrantes no máximo.
+                </li>
+                <li class="servico-desc">
+                  <h3 class="servico-titulo-hack">Ainda está com dúvidas?</h3>Se ainda tiver qualquer dúvida, pode falar sempre com a gente no email oi@suporte.com.br.
                 </li>
               </ul>
             </section>
@@ -176,40 +180,16 @@
         </div>
       </div>
     </section>
-    <!-- seção que vai o formulário -->
-    <!-- <section class="contato-section" title="Informação Hackathon">
-      <h2 class="section-titulo">{vencedores 2018}</h2>
-      <p class="texto">
-        Conheça a equipe campeã da 11º edição!
-      </p>
-      <img class="patricio" src="../assets/alien.svg" alt="ícone de um alienígena" />
-   
-    </section>-->
-    <section class="contato-section" title="Grupo vencedor do Hackathon 2018">
-      <div class="interior-width">
-        <!-- título -->
-        <h2 class="section-titulo">{Vencedores 2018}</h2>
-        <p class="texto">Equipe campeãe da 11º edição - Megazord!</p>
-        <img class="patricio" src="../assets/alien.svg" alt="ícone de um alienígena" />
-        <div class="sobre-section-linha">
-          <div class="sobre-section-coluna">
-            <section class="sobre" title="Equipe vencedora em reunião com superior">
-              <img
-                class="time"
-                src="../assets/equipe.jpg"
-                alt="Equipe 'Megazord' vencedora do hackathon 2018 reunida em uma sala com a diretora de recursos Humanos, Kássia Boch. A imagem contém ao todo 6 pessoas. "
-              />
-            </section>
-          </div>
-          <section class="sobre-section-coluna" title="vídeo da empresa">
-            <section class="sobre" title="Sobre a equipe">
-              <p>A equipe carinhosamente apelidada de 'Megazord' se destacou no último Hackathon pelo seu ótimo desenpenho na organização de tarefas em equipe, e claro, o projeto entregue.</p>
-            </section>
-          </section>
-        </div>
-      </div>
-    </section>
-
+   <v-parallax
+      title="Anúncio do Hackathon"
+      dark
+      :src="require('assets/espaco-hackathon.jpg')"
+      alt="imagem contendo ilustração de planetas e estrelas"
+    >
+      <h1 class="text-center titulo-parallax">{HACKATHON}</h1>
+      <h4 class="text-center sub-parallax">Pegue carona nessa cauda de cometa!</h4>
+    </v-parallax>
+  
     <app-footer />
   </div>
 </template>
@@ -223,58 +203,69 @@ export default {
     AppHeader,
     AppFooter
   },
-data(){
+  data() {
     return {
       id: this.$route.params.id,
-      modo: this.$route.params.id == 'incluir' ? 'Incluir' : 'Editar',
-      name: '',
-      email: '',
-      nascimento:'',
-      faculdade:'',
-      curso:'',
-      endereco:'',
-      estado:'',
-      cidade:'',
-      telefone:'',
-  }
-},
-  
+      modo: this.$route.params.id == "incluir" ? "Incluir" : "Editar",
+      name: "",
+      email: "",
+      idade: "",
+      endereco: "",
+      estado: "",
+      cidade: "",
+      faculdade: "",
+      curso: "",
+      telefone: ""
+    };
+  },
+
   data: () => ({
     valid: true,
     name: "",
     nameRules: [
-      v => !!v || "Nome é necessário",
+      v => !!v || "Nome é um campo obrigatório",
+      v => (v && v.length <= 50) || "Nome deve conter no máximo 50 caractéres"
     ],
-  
+
     email: "",
     emailRules: [
-      v => !!v || "E-mail é necessário",
-      v => /.+@.+\..+/.test(v) || "E-mail Não Válido"
+      v => !!v || "E-mail é um campo obrigatório",
+      v => /.+@.+\..+/.test(v) || "E-mail inválido"
     ],
-    telefone:"",
-    telefoneRules:[
-      v => !!v || "Telefone é Necessário",
-      v => (v && v.length <= 11) || 'Telefone deve ter no máximo 11 caracteres',
-    ]
+    telefone: "",
+    telefoneRules: [
+      v => !!v || "Telefone é um campo obrigatório",
+      v =>
+        (v && v.length <= 11) || "Telefone deve conter no máximo 11 caractéres"
+    ],
+    cidade: "",
+    cidadeRules: [v => !!v || "Cidade é um campo obrogatório"],
+    estado: "",
+    estadoRules: [
+      v => !!v || "Estado é um campo obrigatório",
+      v => (v && v.length == 2) || "Estado deve conter apenas 2 caractéres"
+    ],
+    endereco: "",
+    enderecoRules: [v => !!v || "Endereço é um campo obrigatório"]
   }),
 
-    created (){
-    const usuarios = this.$ls.get('usuarios')
+  created() {
+    const usuarios = this.$ls.get("usuarios");
     if (usuarios) {
-      const usuario = usuarios.find(u => u.id == this.id)
+      const usuario = usuarios.find(u => u.id == this.id);
       if (usuario) {
-        this.name = usuario.name
-        this.email = usuario.email
-        this.nascimento = usuario.nascimento
-        this.faculdade = usuario.faculdade
-        this.curso = usuario.curso
-        this.endereco = usuario.endereco
-        this.estado = usuario.estado
-        this.cidade = usuario.estado
-        this.telefone = usuario.telefone
+        this.name = usuario.name;
+        this.email = usuario.email;
+        this.nascimento = usuario.nascimento;
+        this.faculdade = usuario.faculdade;
+        this.curso = usuario.curso;
+        this.endereco = usuario.endereco;
+        this.estado = usuario.estado;
+        this.cidade = usuario.estado;
+        this.telefone = usuario.telefone;
       }
     }
-},
+  },
 
   methods: {
     validate() {
@@ -282,33 +273,31 @@ data(){
         this.snackbar = true;
       }
     },
-    gerarId () {
-      return Math.round(Math.random() * 9999)
+    gerarId() {
+      return Math.round(Math.random() * 9999);
     },
-    salvar () {
-      let dados = this.$ls.get('usuarios')
-      if (!dados) dados = []
+    salvar() {
+      let dados = this.$ls.get("usuarios");
+      if (!dados) dados = [];
       dados.push({
         id: this.gerarId(),
         name: this.name,
         email: this.email,
-        nascimento: this.nascimento,
+        idade: this.nascimento,
         faculdade: this.faculdade,
         curso: this.curso,
         estado: this.estado,
         endereco: this.endereco,
         cidade: this.cidade,
-        telefone: this.telefone,
-
-        
-      })
-      this.$ls.set('usuarios', dados)
+        telefone: this.telefone
+      });
+      this.$ls.set("usuarios", dados);
     },
-    cancelar () {
-      this.$router.push('/admin/usuarios')
-    },
+    cancelar() {
+      this.$router.push("/admin/usuarios");
+    }
   }
-  }
+};
 </script>
 
 
@@ -317,8 +306,8 @@ p {
   padding-top: 10px;
   /* font-weight: bold; */
 }
-h3{
-  color:#1e272e;
+h3 {
+  color: #1e272e;
 }
 li {
   list-style: none;
@@ -330,7 +319,7 @@ h2::after {
   display: inline-block;
   animation: pisca 0.7s infinite;
 }
-.v-text-field label{
+.v-text-field label {
   color: black;
 }
 .time {

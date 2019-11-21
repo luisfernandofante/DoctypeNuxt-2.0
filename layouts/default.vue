@@ -206,6 +206,7 @@ body {
   width:36px;
   height:36px;
   background:$Verde;
+  background-image: url(../assets/alien.svg);
   border: 4px solid $Preto;
   border-radius: 50%;
   position:absolute;
